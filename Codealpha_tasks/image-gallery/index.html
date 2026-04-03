@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>✨ Premium Image Gallery</h1>
+
+    <!-- Filter Button -->
+    <button class="filter-btn" onclick="toggleFavorites()">❤️ Show Favorites</button>
+
+    <div class="gallery" id="gallery">
+        <img src="images/img1.jpg" onclick="openImage(this)">
+        <img src="images/img2.jpg" onclick="openImage(this)">
+        <img src="images/img3.jpg" onclick="openImage(this)">
+        <img src="images/img4.jpg" onclick="openImage(this)">
+        <img src="images/img5.jpg" onclick="openImage(this)">
+        <img src="images/img6.jpg" onclick="openImage(this)">
+    </div>
+
+    <!-- Preview -->
+    <div id="preview">
+        <span onclick="closeImage()">❌</span>
+
+        <button class="prev" onclick="prevImage()">⬅️</button>
+
+        <div class="preview-box">
+            <img id="previewImg">
+
+            <div class="controls">
+                <button onclick="toggleLike()">❤️</button>
+                <button onclick="startSlideshow()">▶️</button>
+                <button onclick="stopSlideshow()">⏸️</button>
+                <a id="downloadBtn" download>📥 Download</a>
+            </div>
+        </div>
+
+        <button class="next" onclick="nextImage()">➡️</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
